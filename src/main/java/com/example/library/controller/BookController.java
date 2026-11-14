@@ -50,6 +50,7 @@ public class BookController {
     }
     @GetMapping("/books/authoryear")
     public Book findByAuthorAndYear(@RequestParam String author, @RequestParam int year){
+        System.out.println("автор"+author);
         return service.findByAuthorAndYear(author,year);
     }
 }
