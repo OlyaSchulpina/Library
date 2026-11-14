@@ -41,4 +41,10 @@ public class BookService {
         System.out.println("204 No Content");
         repository.deleteById(id);
     }
+    public Book findByAuthor(String author){
+        return repository.findByAuthor(author);
+    }
+    public Book findByAuthorAndYear(String author,int year){
+        return repository.findByAuthorAndYear(author,year);
+    }
 }

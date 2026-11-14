@@ -44,4 +44,12 @@ public class BookController {
     public void deleteBook(@PathVariable Long id){
         service.deleteBook(id);
     }
+    @GetMapping("/books/findByAuthor")
+    public Book findByAuthor(@RequestParam String author){
+        return service.findByAuthor(author);
+    }
+    @GetMapping("/books/authoryear")
+    public Book findByAuthorAndYear(@RequestParam String author, @RequestParam int year){
+        return service.findByAuthorAndYear(author,year);
+    }
 }
