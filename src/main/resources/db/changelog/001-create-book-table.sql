@@ -1,0 +1,7 @@
+CREATE TABLE book(
+id BIG SERIAL PRIMARY KEY,
+title VARCHAR(50),
+author VARCHAR(100),
+year INT
+);
+
